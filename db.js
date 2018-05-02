@@ -25,13 +25,13 @@ var Mock  = require('mockjs');
 var Random = Mock.Random;
 
 module.exports = function() {
-    var data = {news: []};
+    var data = {news: {data:[],message:'success'}};
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 10; i++) {
 
         var content = Random.cparagraph(0,10);
 
-        data.news.push({
+        data.news.data.push({
             id: i,
             title: Random.cword(8,20),
             desc: content.substr(0,40),
